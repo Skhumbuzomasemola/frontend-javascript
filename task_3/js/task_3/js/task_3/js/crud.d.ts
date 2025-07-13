@@ -12,3 +12,8 @@ export function updateRow(rowId, row) {
   console.log(`Update row ${rowId}`, row);
   return rowId;
 }
+import { RowID, RowElement } from '../interface';
+
+export function insertRow(row: RowElement): RowID;
+export function deleteRow(rowId: RowID): void;
+export function updateRow(rowId: RowID, row: RowElement): RowID;

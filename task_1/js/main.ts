@@ -21,3 +21,21 @@ function printTeacher(firstName: string, lastName: string) {
   return `${firstName.charAt(0)}. ${lastName}`;
 }
 console.log(printTeacher("John", "Doe"));
+
+class StudentClass {
+  firstName: string;
+  lastName: string;
+  constructor(firstName: string, lastName: lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+   workOnHomework(): string {
+     return 'Currently working';
+   }
+  displayName(): string {
+    return this.firstName;
+  }
+}
+const student = new StudentClass('John', 'Doe');
+console.log(student.workOnHomework());
+console.log(student.displayName());

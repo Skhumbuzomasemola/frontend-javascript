@@ -50,10 +50,34 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
   }
 }
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
+type Subjects = 'Math' | 'History';
+
+// 2. Function definition
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+}
+
 
 
 
 console.log(createEmployee(200));     
 console.log(createEmployee(1000));  
 console.log(createEmployee('$500'));
+console.log(executeWork(createEmployee(200)));    
+console.log(executeWork(createEmployee(1000))); 
+console.log(teachClass('Math'));     
+console.log(teachClass('History')); 
+
+
   
